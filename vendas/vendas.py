@@ -6,7 +6,7 @@ import streamlit as st
 st.set_page_config(layout='wide')
 
 # Load the data from the CSV file
-df = pd.read_csv('vendas/vendas.csv', delimiter=';', parse_dates=['Date'])
+df = pd.read_csv('vendas.csv', delimiter=';', parse_dates=['Date'])
 
 # Convert 'Total' and 'Rating' columns to numeric, replacing ',' with '.'
 df['Total'] = df['Total'].str.replace(',', '.').astype(float)
